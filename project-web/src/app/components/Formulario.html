@@ -5,39 +5,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script type="text/javascript" src="Formulario.js"></script>
 		<title>telematicaApp</title>
 	</head>
 
-	<body class="container" ng-app>
+	<body class="container" ng-app="formulario">
 		<h1>especifique los parametros con los que quiere crear la maquina virtual</h1>
 		<hr>
-		<form action="">
-			<div>
-				<label title="nombre de la maquina virtual">nombre</label>
-				<input type="text" name="name" ng-model="name">
+		<form ng-controller="virtualMachineCtrl as vm" ng-submit="vm.submit()">
+			<div class="row">
+				<label class="col-3" title="nombre de la maquina virtual">nombre</label>
+				<input required class="col" type="text" placeholder="ej: terraformvm" ng-model="vm.vm.name">
+			</div>
+			<div class="row">
+				<label class="col-3" title="almacenamiento de la maquina virtual">almacenamiento</label>
+				<input required class="col" type="text" placeholder="ej: Standard_A0" ng-model="vm.vm.vmSize">
+			</div>
+			<div class="row">
+				<label class="col-3" title="direccion ip en la que se localizara la maquina virtual">direccion ip publica</label>
+				<input required class="col" type="text" placeholder="ej: dynamic" ng-model="vm.vm.publicIpAdress">
 			</div>
 			<div>
-				<label title="almacenamiento de la maquina virtual">almacenamiento</label>
-				<input type="text" name="vm_size" ng-model="vmSize">
-			</div>
-			<div>
-				<label title="direccion ip en la que se localizara la maquina virtual">direccion ip publica</label>
-				<input type="text" name="public_ip_address_allocation" ng-model="publicIpAdress">
-			</div>
-			<div>
-				<div>
-					<label title="nombre de administrador para iniciar sesion">usuario</label>
-					<input type="text" name="admin_username" ng-model="username">
+				<div class="row">
+					<label class="col-3" title="nombre de administrador para iniciar sesion">usuario</label>
+					<input class="col" type="text" placeholder="ej: carlos" ng-model="vm.vm.username">
 				</div>
-				<div>
-					<label title="contraseña de administrador para iniciar sesion">contraseña</label>
-					<input type="password" name="admin_password" ng-model="password">
+				<div class="row">
+					<label class="col-3" title="contraseña de administrador para iniciar sesion">contraseña</label>
+					<input class="col" type="password" placeholder="ej: Password1234!" ng-model="vm.vm.password">
 				</div>
-				<div>
-					<label title="contraseña">confirmar contraseña</label>
-					<input type="password" name="admin_password_confirm" ng-model="passwordConfrim">
+				<div class="row">
+					<label class="col-3" title="contraseña">confirmar contraseña</label>
+					<input class="col" type="password" placeholder="ej: Password1234!" ng-model="vm.passwordConfirm">
 				</div>
 			</div>
+			<input type="submit">
 		</form>
 	</body>
 </html>
