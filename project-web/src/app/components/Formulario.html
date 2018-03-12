@@ -1,45 +1,42 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-		<script type="text/javascript" src="Formulario.js"></script>
-		<title>telematicaApp</title>
-	</head>
-
 	<body class="container" ng-app="formulario">
-		<h1>especifique los parametros con los que quiere crear la maquina virtual</h1>
+		<h1 class="display-4 text-center">Especifique los parametros con los que quiere crear la maquina virtual</h1>
 		<hr>
 		<form ng-controller="virtualMachineCtrl as vm" ng-submit="vm.submit()">
 			<div class="row">
-				<label class="col-3" title="nombre de la maquina virtual">nombre</label>
+				<label class="col-4 h2" title="nombre de la maquina virtual">nombre: {{vm.vm.name}}</label>
 				<input required class="col" type="text" placeholder="ej: terraformvm" ng-model="vm.vm.name">
 			</div>
+			<br>
 			<div class="row">
-				<label class="col-3" title="almacenamiento de la maquina virtual">almacenamiento</label>
+				<label class="col-4 h2" title="almacenamiento de la maquina virtual">almacenamiento:</label>
 				<input required class="col" type="text" placeholder="ej: Standard_A0" ng-model="vm.vm.vmSize">
 			</div>
+			<br>
 			<div class="row">
-				<label class="col-3" title="direccion ip en la que se localizara la maquina virtual">direccion ip publica</label>
+				<label class="col-4 h2" title="direccion IP en la que se localizara la maquina virtual">direccion IP publica:</label>
 				<input required class="col" type="text" placeholder="ej: dynamic" ng-model="vm.vm.publicIpAdress">
 			</div>
+			<br>
 			<div>
 				<div class="row">
-					<label class="col-3" title="nombre de administrador para iniciar sesion">usuario</label>
+					<label class="col-4 h2" title="nombre de administrador para iniciar sesion">usuario:</label>
 					<input class="col" type="text" placeholder="ej: carlos" ng-model="vm.vm.username">
 				</div>
+				<br>
 				<div class="row">
-					<label class="col-3" title="contraseña de administrador para iniciar sesion">contraseña</label>
+					<label class="col-4 h2" title="contraseña de administrador para iniciar sesion">contraseña:</label>
 					<input class="col" type="password" placeholder="ej: Password1234!" ng-model="vm.vm.password">
 				</div>
+				<br>
 				<div class="row">
-					<label class="col-3" title="contraseña">confirmar contraseña</label>
+					<label class="col-4 h2" title="contraseña">confirmar contraseña:</label>
 					<input class="col" type="password" placeholder="ej: Password1234!" ng-model="vm.passwordConfirm">
 				</div>
 			</div>
-			<input type="submit">
+			<br>
+			<input class="btn-primary btn-block" type="submit">
 		</form>
 	</body>
 </html>
