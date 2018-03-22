@@ -2,8 +2,6 @@ module.exports = {
   template: require('./Virtual.html'),
   controller: Entity
 };
-function Entity($scope, Api, Util) {
+function Entity($scope) {
   this.scope = $scope;
-  this.Api = Api;
-  this.Util = Util;
 }

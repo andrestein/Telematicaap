@@ -6,4 +6,5 @@ module.exports = {
 /** @ngInject */
 function Navbar($scope) {
   this.scope = $scope;
+  this.scope.prevId = '';
 }

@@ -7,9 +7,18 @@
             <span class="md-subhead" translate="probability.subTitle">Los campos con el simbolo (*) son obligatorios.</span>
           </md-card-title-text>
         </md-card-title>
-        <md-card-content flex layout-align="space-between center">              
-          <div layout="row" >
-          </div>          
+        <md-card-content layout="row" layout-align="space-between">
+            <div layout="column" flex>
+                <div layout="row">
+                    <md-input-container class="md-block" flex="20">
+                        <label>Nombre del resource group</label>
+                        <input required name="entityid" ng-model="data.resource.name" ng-disabled="editing" />
+                        <div ng-messages="virtualForm.nameResourse.$error">
+                            <div ng-message="required">Campo obligatorio.</div>
+                        </div>
+                    </md-input-container>
+                </div>
+            </div>
         </md-card-content>
       </md-card>
     </form>
