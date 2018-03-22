@@ -1,25 +1,39 @@
 var angular = require('angular');
-require('todomvc-app-css/index.css');
 
-var todos = require('./app/todos/todos');
-var App = require('./app/containers/App');
-var Header = require('./app/components/Header');
-var MainSection = require('./app/components/MainSection');
-var TodoTextInput = require('./app/components/TodoTextInput');
-var TodoItem = require('./app/components/TodoItem');
-var Footer = require('./app/components/Footer');
+require('angular-material');
 require('angular-ui-router');
-var routesConfig = require('./routes');
+require('angular-aria');
+require('angular-animate');
+require('angular-material');
+require('angular-messages');
+require('angular-moment');
 
-import './index.css';
+var virtual = require('./app/components/Virtual/Virtual');
+var Navbar = require('./app/components/navbar/Navbar');
+var routesConfig = require('./routes');
+var config = require('./config');
+var Home = require('./app/components/home/Home');
+var Api = require('./app/services/Data');
+var Util = require('./app/services/Util');
+var Items = require('./app/services/Items');
+
+require('./index.css');
+require('angular-material/angular-material.css');
 
 angular
-  .module('app', ['ui.router'])
+  .module('app', [
+    'ui.router',
+    'ngAria',
+    'ngAnimate',
+    'ngMessages',
+    'ngMaterial',
+    'angularMoment'
+  ])
+  .config(config)
   .config(routesConfig)
-  .service('todoService', todos.TodoService)
-  .component('app', App)
-  .component('headerComponent', Header)
-  .component('footerComponent', Footer)
-  .component('mainSection', MainSection)
-  .component('todoTextInput', TodoTextInput)
-  .component('todoItem', TodoItem);
+  .component('home', Home)
+  .component('virtual', virtual)
+  .component('navbarComponent', Navbar)
+  .service('Util', Util)
+  .service('Items', Items)
+  .factory('Api', Api);

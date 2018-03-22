@@ -1,0 +1,278 @@
+{
+    "nav": {
+        "master": "Maestro",
+        "entity": "Entidades",
+        "project": "Proyectos",
+        "users": "Usuarios",
+        "probabilities": "Probabilidades",
+        "politics": "Politicas",
+        "exit": "Salir"
+    },
+    "entitys": {
+        "title": "Entidades",
+        "descrip": "Los campos con el simbolo (*) son obligatorios.",
+        "nomEntity": "Nombre",
+        "entityState": {
+            "on": "Entidad habilitada",
+            "off": "Entidad deshabilitada"
+        },
+        "entityDescript": "Descripción",
+        "addEntity": "Agregar",
+        "modEntity": "Modificar",
+        "deleteEntity": "Eliminar",
+        "clearEntity": "Limpiar campos",
+        "tableEntity": "Entidades",
+        "addConfigEntity": "Agregar configuracion",
+        "addPolicyTooltip": "Políticas por defecto",
+        "policy": "Agregar politicas",
+        "nitConfig": {
+            "title": "Agregar Configuración NIT",
+            "element": "Elemento:",
+            "tooltip": "Variables de configuración",
+            "addConfig": "Agregar configuración",
+            "close": "Cerrar"
+        },
+        "alreadyExists": "La entidad ya existe.",
+        "notFound": "La entidad no existe.",
+        "allEntitiesError": "Error al cargar las entidades."
+    },
+    "projects": {
+        "title": "Proyectos",
+        "subTitle": "Los campos con el simbolo (*) son obligatorios.",
+        "input": {
+            "code": "Código",
+            "name": "Nombre",
+            "entityName": "Entidad",
+            "priority": " Prioridad"
+        },
+        "entityName": "Entidad",
+        "addProject": "Agregar",
+        "modProject": "Modificar",
+        "deleteProject": "Eliminar",
+        "clearFields": "Limpiar campos",
+        "note": "Solo se permiten archivos con extensión (.csv)",
+        "trData": {
+            "thNameFile": "Nombre del archivo",
+            "thSizeFile": "Tamaño",
+            "thProgres": "Progreso",
+            "thState": "Estado"
+        },
+        "table": {
+            "code": "Código ",
+            "name": "Nombre ",
+            "priority": "Prioridad ",
+            "entity": "Entidad "
+        },
+        "alreadyExists": "El proyecto ya exite.",
+        "notFound": "El proyecto no exite.",
+        "allProjectsError": "Error al cargar los proyectos.",
+        "allNotFound": "No se encontraron proyectos."
+    },
+    "users": {
+        "title": "Usuarios",
+        "subTitle": "Los campos con el simbolo (*) son obligatorios.",
+        "id": "Identificación",
+        "name": "Nombre",
+        "rol": "Rol",
+        "entityName": "Entidad",
+        "mail": "Correo",
+        "userStatus": {
+            "on": "Usuario habilitado",
+            "off": "Usuario deshabilitado"
+        },
+        "pass": "Contraseña",
+        "rePass": "Confirmar Contraseña",
+        "addUser": "Agregar",
+        "modUser": "Modificar",
+        "deleteUser": "Eliminar",
+        "clearFields": "Limpiar campos",
+        "tableUsers": {
+            "entityUser": "Entidad",
+            "state": "Activo",
+            "rol": "Rol",
+            "id": "Identificación",
+            "name": "Nombre"
+        },
+        "alreadyExists": "El usuario ya exite.",
+        "notFound": "El usuario no exite."
+    },
+    "policies": {
+        "title": "Aplicación de políticas",
+        "subTitle": "Los campos con el simbolo (*) son obligatorios.",
+        "code": "Código Política",
+        "name": "Nombre",
+        "deterio": "Deterioro",
+        "priority": "Prioridad",
+        "entityName": "Entidad",
+        "projectName": "Proyecto",
+        "formula": "Formula",
+        "addPolicy": "Agregar",
+        "modPolicy": "Modificar",
+        "deletePolicy": "Eliminar",
+        "clearFields": "Limpiar campos",
+        "table": {
+            "code": "Código",
+            "name": "Nombre",
+            "priority": "Prioridad",
+            "castigo": "% Castigo",
+            "entity": "Entidad "
+        },
+        "alreadyExists": "La política ya exite.",
+        "notFound": "La política no exite."
+    },
+    "probability": {
+        "title": "Matriz de probabilidades",
+        "subTitle": "Los campos con el simbolo (*) son obligatorios.",
+        "input": {
+            "entityName": "Entidad",
+            "projectName": "Seleccione el previo proyecto",
+            "projectName2": "Seleccione el actual proyecto"
+        },
+        "btnGenerate": "Generar matriz"
+    },
+    "changeP": {
+        "title": "Cambiar contraseña",
+        "subTitle": "Los campos con el simbolo (*) son obligatorios.",
+        "pasAct": "Contraseña actual",
+        "newPass": "Nueva Contraseña",
+        "campos1": "Debe tener minimo ocho caracteres",
+        "campos2": "No ingresaste ningun valor",
+        "passConfirm": "Confirmar nueva Contraseña",
+        "passCampo1": "No ingresaste ningun valor",
+        "passCampo2": "Las contraseñas no coinciden",
+        "change": "Cambiar"
+    },
+    "forgotpass": {
+        "title": "Cambiar contraseña",
+        "subTitle": "Los campos con el simbolo (*) son obligatorios.",
+        "mail": "Correo"
+    },
+    "login": {
+        "title": "RIESGO DE CRÉDITO",
+        "mail": "Correo electrónico",
+        "pass": "Contraseña",
+        "login": "Ingresar",
+        "dataError": "Correo y/o clave incorrecta",
+        "disableUser": "Cuenta inactiva. Por favor contacte al administrador del sistema.",
+        "disableEntity": "Entidad inactiva. Por favor contacte al administrador del sistema.",
+        "recoverPasswordSuccessfully": "Se ha enviado el correo al usuario correctamente.",
+        "recoverPasswordError": "El correo no se ha enviado. Por favor verifique su identificación o contacte al administrador.",
+        "recorverMenu": {
+            "title": "Recuperar Contraseña",
+            "close": "Cerrar",
+            "id": "Ingrese su identificación",
+            "recuperar": "Recuperar"
+        },
+        "recover": "¿Has olvidado tu contraseña?"
+    },
+    "warnings": {
+        "entity": {
+            "nit": {
+                "nit1": "Campo obligatorio.",
+                "nit2": "El NIT debe de tener menos de 30 caracteres."
+            }
+        },
+        "users": {
+            "pass": {
+                "pass1": "Debe tener mínimo ocho caracteres",
+                "pass2": "No ingresaste ningún valor"
+            }
+        },
+        "project": {
+            "entity": {
+                "entity1": "Debes de seleccionar una entidad."
+            },
+            "project": {
+                "project1": "Debes de seleccionar un proyecto."
+            },
+            "date": {
+                "date1": "Debe de seleccionar una fecha de corte"
+            }
+        },
+        "probability": {
+            "entity": {
+                "entity1": "Debes de seleccionar una entidad."
+            },
+            "project": {
+                "project1": "Debes de seleccionar un proyecto."
+            }
+        },
+        "payments": {
+            "entity": {
+                "entity1": "Debes de seleccionar una entidad."
+            },
+            "project": {
+                "project1": "Debes de seleccionar un proyecto."
+            }
+        },
+        "assets": {
+            "entity": {
+                "entity1": "Debes de seleccionar una entidad."
+            },
+            "project": {
+                "project1": "Debes de seleccionar un proyecto."
+            },
+            "payments": {
+                "payment1": "Debe de ingresar un pagaré"
+            }
+        },
+        "summary": {
+            "entity": {
+                "entity1": "Debes de seleccionar una entidad."
+            },
+            "project": {
+                "project1": "Debes de seleccionar un proyecto."
+            }
+        },
+        "reportG": {
+            "entity": {
+                "entity1": "Debes de seleccionar una entidad."
+            },
+            "project": {
+                "project1": "Debes de seleccionar un proyecto."
+            }
+        }
+    },
+    "common": {
+        "requiredField": "El campo es obligatorio",
+        "searchError": "Error al consultar. Por favor intente de nuevo.",
+        "saveSuccessfully": "Creación realizada exitosamente.",
+        "saveError": "Error al guardar. Por favor intente de nuevo",
+        "modifySuccessfully": "Modificación realizada exitosamente.",
+        "modifyError": "Error al modificar. Por favor intente de nuevo",
+        "deleteSuccessfully": "Eliminación realizada exitosamente.",
+        "deleteError": "Error al eliminar. Por favor intente de nuevo",
+        "generalError": "Ha ocurrido un problema al consultar los datos.",
+        "btnSearch": "Buscar",
+        "btnSave": "Agregar",
+        "btnUpdate": "Modificar",
+        "btnDelete": "Eliminar",
+        "btnClean": "Limpiar campos"
+    },
+    "util": {
+        "deleteMessage": "¿Está seguro de eliminar este item?",
+        "alertMessage": "Esta acción no se puede deshacer.",
+        "okDelete": "Eliminar",
+        "cancelMessage": "Cancelar",
+        "rolAdmin": "Administrador",
+        "rolUserAdmin": "Super Usuario",
+        "rolUser": "Usuario"
+    },
+    "addConfig": {
+        "assetid": "Ingresa el encabezado de la columna de observaciones",
+        "ammount": "Ingresa el encabezado de la columna modalidad",
+        "balance": "Ingresa el encabezado de la columna saldo",
+        "category": "Ingresa el encabezado de la columna calificacion"
+    },
+    "file": {
+        "uploadFile": "Subir",
+        "cancelFile": "Cancelar",
+        "deleteFile": "Eliminar",
+        "selectedFile": "Debe de seleccionar un archivo.",
+        "fileError": "El archivo no es permitido.",
+        "fileExt": "La extensión del archivo no es permitida. Por favor seleccione un archivo (.csv)",
+        "fileUploading": "Subiendo archivo: ",
+        "fileCancel": "Operación cancelada ",
+        "saving": "Guardando"
+    }
+}

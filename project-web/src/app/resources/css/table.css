@@ -1,0 +1,36 @@
+table.pvtTable {
+    font-size: 9pt;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.pvtTable thead tr th,
+table.pvtTable tbody tr th {
+    background-color: white;
+    border: 1px solid #CDCDCD;
+    font-size: 9pt;
+    padding: 8px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+table.pvtTable .pvtColLabel {
+    text-align: center;
+}
+
+table.pvtTable .pvtTotalLabel {
+    text-align: right;
+}
+
+table.pvtTable tbody tr td {
+    color: #3D3D3D;
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid #CDCDCD;
+    vertical-align: top;
+    text-align: right;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}

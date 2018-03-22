@@ -1,0 +1,20 @@
+<script>
+  var scope = angular.element($("#contenedorNav")).scope();
+  function cambiarColor(idFirst) {
+    if(scope.prevId != null){
+      document.getElementById(scope.prevId).style.background = '#ba0f16';
+    }
+    document.getElementById(idFirst).style.background = 'gray';
+    scope.prevId=idFirst;
+  }
+</script>
+<md-content flex id="contenedorNav">
+  <md-toolbar>
+    <div class="md-toolbar-tools navbar">
+      <md-button id="virtual" onclick="cambiarColor('virtual')"  ui-sref="home.virtual" translate="nav.entity">crear maquina virtual</md-button>            
+    </div>
+  </md-toolbar>
+  <div layout="column" layout-align="top" layout-padding>
+    <ui-view></ui-view>
+  </div>
+</md-content>
