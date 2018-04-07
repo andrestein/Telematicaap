@@ -9,7 +9,9 @@
         </md-card-title>
         <md-card-content layout="row" layout-align="space-between">
             <div layout="column" flex>
+                    <span class="md-subhead" translate="probability.subTitle">Ingresa los datos de la cuenta.</span>
                     <div layout="row">
+                        <span flex></span>
                         <md-input-container class="md-block" flex="20">
                             <label>Codigo de subscripcion</label>
                             <input required name="resourceName" ng-model="data.clienSusbs.cod" ng-disabled="editing" />
@@ -17,8 +19,7 @@
                                 <div ng-message="required">Campo obligatorio.</div>
                             </div>
                         </md-input-container>
-                    </div>
-                    <div layout="row">
+                        <span flex></span>
                         <md-input-container class="md-block" flex="20">
                             <label>Ingrese el client_id</label>
                             <input required name="resourceName" ng-model="data.clienSusbs.clientId" ng-disabled="editing" />
@@ -26,16 +27,21 @@
                                 <div ng-message="required">Campo obligatorio.</div>
                             </div>
                         </md-input-container>
+                        <span flex></span>
+                        <md-input-container class="md-block" flex="20">
+                            <label>Ingresa la password</label>
+                            <input required name="resourceName" ng-model="data.clienSusbs.password" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                        </md-input-container>
+                        <span flex></span>
                     </div>
-                    <div layout="row">
-                            <md-input-container class="md-block" flex="20">
-                                <label>Ingrese el client_id</label>
-                                <input required name="resourceName" ng-model="data.clienSusbs.clientId" ng-disabled="editing" />
-                                <div ng-messages="virtualForm.nameResourse.$error">
-                                    <div ng-message="required">Campo obligatorio.</div>
-                                </div>
-                            </md-input-container>
-                        </div>
+                <div layout="row">
+                    <md-card-title-text>                        
+                        <span class="md-subhead" translate="probability.subTitle">Ingresa los datos necesarios para crear la maquina virtual.</span>
+                    </md-card-title-text>
+                </div>
                 <div layout="row">
                     <md-input-container class="md-block" flex="20">
                         <label>Nombre del resource group</label>
@@ -44,6 +50,49 @@
                             <div ng-message="required">Campo obligatorio.</div>
                         </div>
                     </md-input-container>
+                    <span flex></span>
+                    <md-input-container class="md-block" flex="20">
+                            <label>Nombre del virtual network</label>
+                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                    </md-input-container>
+                    <span flex></span>
+                    <md-input-container class="md-block" flex="20">
+                            <label>Nombre de la mascara de red</label>
+                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                    </md-input-container>
+                    <span flex></span>
+                    </div>
+                    <div layout="row">
+                    <md-input-container class="md-block" flex="20">
+                            <label>Nombre de la ip publica</label>
+                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                    </md-input-container>
+                    <span flex></span>
+                    <md-input-container class="md-block" flex="20">
+                            <label>Nombre de la ip publica</label>
+                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                    </md-input-container>
+                    <span flex></span>
+                    <md-input-container class="md-block" flex="20">
+                            <label>Nombre de la storage account</label>
+                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                    </md-input-container>
+                    <span flex></span>
                 </div>
             </div>
         </md-card-content>
