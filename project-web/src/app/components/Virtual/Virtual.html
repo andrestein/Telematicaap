@@ -9,10 +9,37 @@
         </md-card-title>
         <md-card-content layout="row" layout-align="space-between">
             <div layout="column" flex>
+                    <div layout="row">
+                        <md-input-container class="md-block" flex="20">
+                            <label>Codigo de subscripcion</label>
+                            <input required name="resourceName" ng-model="data.clienSusbs.cod" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div layout="row">
+                        <md-input-container class="md-block" flex="20">
+                            <label>Ingrese el client_id</label>
+                            <input required name="resourceName" ng-model="data.clienSusbs.clientId" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div layout="row">
+                            <md-input-container class="md-block" flex="20">
+                                <label>Ingrese el client_id</label>
+                                <input required name="resourceName" ng-model="data.clienSusbs.clientId" ng-disabled="editing" />
+                                <div ng-messages="virtualForm.nameResourse.$error">
+                                    <div ng-message="required">Campo obligatorio.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
                 <div layout="row">
                     <md-input-container class="md-block" flex="20">
                         <label>Nombre del resource group</label>
-                        <input required name="entityid" ng-model="data.resource.name" ng-disabled="editing" />
+                        <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
                         <div ng-messages="virtualForm.nameResourse.$error">
                             <div ng-message="required">Campo obligatorio.</div>
                         </div>

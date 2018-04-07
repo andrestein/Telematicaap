@@ -1,7 +1,7 @@
 module.exports = {
   template: require('./Virtual.html'),
-  controller: Entity
+  controller: Virtual
 };
-function Entity($scope) {
+function Virtual($scope) {
   this.scope = $scope;
 }
