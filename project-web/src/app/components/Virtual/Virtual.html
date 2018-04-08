@@ -43,6 +43,7 @@
                     </md-card-title-text>
                 </div>
                 <div layout="row">
+                    <span flex></span>
                     <md-input-container class="md-block" flex="20">
                         <label>Nombre del resource group</label>
                         <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
@@ -53,7 +54,7 @@
                     <span flex></span>
                     <md-input-container class="md-block" flex="20">
                             <label>Nombre del virtual network</label>
-                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <input required name="resourceName" ng-model="data.network.name" ng-disabled="editing" />
                             <div ng-messages="virtualForm.nameResourse.$error">
                                 <div ng-message="required">Campo obligatorio.</div>
                             </div>
@@ -61,7 +62,7 @@
                     <span flex></span>
                     <md-input-container class="md-block" flex="20">
                             <label>Nombre de la mascara de red</label>
-                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <input required name="resourceName" ng-model="data.network.mask" ng-disabled="editing" />
                             <div ng-messages="virtualForm.nameResourse.$error">
                                 <div ng-message="required">Campo obligatorio.</div>
                             </div>
@@ -69,17 +70,10 @@
                     <span flex></span>
                     </div>
                     <div layout="row">
-                    <md-input-container class="md-block" flex="20">
-                            <label>Nombre de la ip publica</label>
-                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
-                            <div ng-messages="virtualForm.nameResourse.$error">
-                                <div ng-message="required">Campo obligatorio.</div>
-                            </div>
-                    </md-input-container>
                     <span flex></span>
                     <md-input-container class="md-block" flex="20">
                             <label>Nombre de la ip publica</label>
-                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <input required name="resourceName" ng-model="data.network.publicIp" ng-disabled="editing" />
                             <div ng-messages="virtualForm.nameResourse.$error">
                                 <div ng-message="required">Campo obligatorio.</div>
                             </div>
@@ -87,11 +81,27 @@
                     <span flex></span>
                     <md-input-container class="md-block" flex="20">
                             <label>Nombre de la storage account</label>
-                            <input required name="resourceName" ng-model="data.resource.name" ng-disabled="editing" />
+                            <input required name="resourceName" ng-model="data.storange.name" ng-disabled="editing" />
                             <div ng-messages="virtualForm.nameResourse.$error">
                                 <div ng-message="required">Campo obligatorio.</div>
                             </div>
                     </md-input-container>
+                    <span flex></span>
+                    <md-input-container class="md-block" flex-gt-sm>
+                            <label>Maquina virtual a crear</label>
+                            <md-select ng-model="data.storange.VM">
+                              <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                                {{state.abbrev}}
+                              </md-option>
+                            </md-select>
+                    </md-input-container>
+                    <span flex></span>
+                </div>
+                <div  layout="row">
+                    <span flex></span>
+                    <md-button id="download" class="md-raised" ng-disabled="!virtualForm.$valid">
+                        Crear maquina virtual
+                    </md-button>
                     <span flex></span>
                 </div>
             </div>
