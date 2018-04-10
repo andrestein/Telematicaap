@@ -1,10 +1,9 @@
 module.exports = UtilService;
 
 /** @ngInject */
-function UtilService($log, $mdToast, $mdDialog, $cookies, $translate, Api) {
+function UtilService($log, $mdToast, $mdDialog, $cookies, Api) {
   this.log = $log;
   this.mdToast = $mdToast;
-  this.translate = $translate;
   this.cookies = $cookies;
   this.mdDialog = $mdDialog;
   this.Api = Api;

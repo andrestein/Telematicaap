@@ -31,8 +31,28 @@ public class DataRest {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response addData(@PathParam("path") String path, String json) {
-		System.out.println("Hola");
+		System.out.println(json);
 		return request(json, "add", path);
+	}
+	
+	@POST
+	@Path("/matrix")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response getMatriz(String info) {
+		JSONObject data = null;
+		try {
+			data = new JSONObject(info);
+			String entityid = data.getString("entityid");
+			String prev = data.getString("prev");
+			String actual = data.getString("actual");
+			return Response.ok().entity(data.toString()).build();
+		} catch (Exception e) {
+			e.printStackTrace();
+			JSONObject json = new JSONObject();
+			json.put("error", e.getMessage());
+			return Response.serverError().entity(json.toString()).build();
+		}
 	}
 
 	/*

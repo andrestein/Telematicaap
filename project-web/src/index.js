@@ -7,6 +7,8 @@ require('angular-animate');
 require('angular-material');
 require('angular-messages');
 require('angular-moment');
+require('angular-resource');
+require('angular-cookies');
 
 var virtual = require('./app/components/Virtual/Virtual');
 var Navbar = require('./app/components/navbar/Navbar');
@@ -25,6 +27,8 @@ angular
     'ui.router',
     'ngAria',
     'ngAnimate',
+    'ngResource',
+    'ngCookies',
     'ngMessages',
     'ngMaterial',
     'angularMoment'

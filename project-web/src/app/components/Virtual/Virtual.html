@@ -94,12 +94,15 @@
                                 {{state.abbrev}}
                               </md-option>
                             </md-select>
+                            <div ng-messages="virtualForm.virtualMachine.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
                     </md-input-container>
                     <span flex></span>
                 </div>
                 <div  layout="row">
                     <span flex></span>
-                    <md-button id="download" class="md-raised" ng-disabled="!virtualForm.$valid">
+                    <md-button class="md-raised" ng-click="virtualForm.$valid && $ctrl.loadData()" ng-disabled="!virtualForm.$valid">
                         Crear maquina virtual
                     </md-button>
                     <span flex></span>
