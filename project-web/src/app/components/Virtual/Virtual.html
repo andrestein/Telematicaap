@@ -36,6 +36,14 @@
                             </div>
                         </md-input-container>
                         <span flex></span>
+                        <md-input-container class="md-block" flex="20">
+                            <label>Ingresa el tenant de la cuenta</label>
+                            <input required name="resourceName" ng-model="data.clienSusbs.tenant" ng-disabled="editing" />
+                            <div ng-messages="virtualForm.nameResourse.$error">
+                                <div ng-message="required">Campo obligatorio.</div>
+                            </div>
+                        </md-input-container>
+                        <span flex></span>
                     </div>
                 <div layout="row">
                     <md-card-title-text>                        
@@ -99,6 +107,21 @@
                             </div>
                     </md-input-container>
                     <span flex></span>
+                </div>
+                <div layout="row">
+                        <span flex></span>
+                        <md-input-container class="md-block" flex-gt-sm>
+                                <label>Ubicacion de la maquina virtual</label>
+                                <md-select ng-model="data.storange.location">
+                                  <md-option ng-repeat="location in locations" value="{{location.abbrev}}">
+                                    {{location.abbrev}}
+                                  </md-option>
+                                </md-select>
+                                <div ng-messages="virtualForm.virtualMachine.$error">
+                                    <div ng-message="required">Campo obligatorio.</div>
+                                </div>
+                        </md-input-container>
+                        <span flex></span>
                 </div>
                 <div  layout="row">
                     <span flex></span>
