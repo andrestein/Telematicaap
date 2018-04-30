@@ -1,2 +1,2 @@
 # Telematicaap
-Aplicacion que despliega una maquina virtual en azure
+Aplicacion que despliega una maquina virtual en azure.
